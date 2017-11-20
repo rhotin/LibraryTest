@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.roman.librarytest.DetailActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/libNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#a00000"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone#"
+            android:id="@+id/phoneButton"
+            android:layout_weight="1"
+            android:onClick="callClicked"/>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/websiteTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Website:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#b85252"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/websiteTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:onClick="websiteClicked"
+                android:text="www."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#00f" />
+
+            <TextView
+                android:id="@+id/addressTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#b85252"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Address"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/hourTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Library Hours:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#b85252"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hoursTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Hours"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
